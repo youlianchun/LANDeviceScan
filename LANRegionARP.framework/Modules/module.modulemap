@@ -1,0 +1,6 @@
+framework module LANRegionARP {
+  umbrella header "LANRegionARP.h"
+
+  export *
+  module * { export * }
+}
