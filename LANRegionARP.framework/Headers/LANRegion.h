@@ -6,7 +6,7 @@
 //  Copyright © 2017年 ylchun. All rights reserved.
 //
 //  获取外网ip通过访问 http://ifconfig.me/ip
-//  
+//
 
 #import <Foundation/Foundation.h>
 
@@ -31,7 +31,7 @@ static Addrs4* Addrs4Marke(NSUInteger A, NSUInteger B, NSUInteger C, NSUInteger 
 
 /**
  创建一个网络对象
-
+ 
  @param ip 网内ip
  @param mark 网络ip掩码
  @return 成功返回对象，失败返回nil
@@ -40,11 +40,27 @@ static Addrs4* Addrs4Marke(NSUInteger A, NSUInteger B, NSUInteger C, NSUInteger 
 
 /**
  获取字符串地址
-
+ 
  @param addrs Addrs4
  @return 成功返回字符串地址，失败返回nil
  */
--(NSString*)stringWithAddrs:(Addrs4*)addrs;
++(NSString*)stringWithAddrs:(Addrs4*)addrs;
+
+/**
+ 获取ip对应值
+ 
+ @param addrs Addrs4
+ @return ip值
+ */
++(NSUInteger)valueWithAddrs:(Addrs4*)addrs;
+
+/**
+ 获取ip对应值
+ 
+ @param addr Addrs4 String
+ @return ip值
+ */
++(NSUInteger)valueWithAddr:(NSString*)addr;
 
 @end
 
@@ -67,7 +83,7 @@ static Addrs4* Addrs4Marke(NSUInteger A, NSUInteger B, NSUInteger C, NSUInteger 
 
 /**
  获取当前局域网地址信息，移动蜂窝网络下无效
-
+ 
  @return 成功返回对象，失败返回nil
  */
 +(instancetype)currentRegion;
