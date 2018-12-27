@@ -8,3 +8,5 @@
     //code...
     
 }];
+
+# 由于代码丢失，实现可参考 https://github.com/youlianchun/SimplePing 
